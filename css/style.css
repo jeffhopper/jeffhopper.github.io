@@ -1,500 +1,58 @@
-/*
-Project Name: relaxr rwd
-Client: Your Client
-Author: JEFF HOPPER
-Developer @GA in NYC
-*/
-
-
-/******************************************
-/* SETUP
-/*******************************************/
-
-
-/* Box Model Hack */
-
-* {
-    -moz-box-sizing: border-box;
-    /* Firexfox */
-    -webkit-box-sizing: border-box;
-    /* Safari/Chrome/iOS/Android */
+*,
+*:before,
+*:after {
     box-sizing: border-box;
-    /* IE */
 }
-
-
-/* Clear fix hack */
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-.clear {
-    clear: both;
-}
-
-.alignright {
-    float: right;
-    padding: 0 0 10px 10px;
-    /* note the padding around a right floated image */
-}
-
-.alignleft {
-    float: left;
-    padding: 0 10px 10px 0;
-    /* note the padding around a left floated image */
-}
-
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
 body {
-    color: #f0efef;
-    font-size: 26px;
-    line-height: 1.4;
-    color: #606161;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-weight: 300;
+	height: 100vh;
 }
-
-a {
-    text-decoration: none;
+#container{
+	margin: 70px auto 0 auto;
+	display: flex;
+	height:80vh;
+	width: 1300px;
+	align-items: center;
+	justify-content: center;
 }
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-
-
-/* Center the container */
-
-html {
-    font-size: 1rem;
+#image {
+	width: 700px;
+	margin-left: -60px;
 }
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
+#image img {
+	display: block;
+	width: 70%;
+	height: auto;
+	margin: 0 auto;
+	margin-right: 0px;
 }
-
-.logo {
-    font-size: 3rem;
-    font-weight: 800;
+#enter {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 30%;
+	height: 465px;
+	text-align: left;
+	margin-left: 70px;
 }
-
-header {
-    background: #033048;
-    padding: 25px 0;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 0;
+#enter a {
+	text-decoration: none;
+	/*color: rgba(40,40,40,1);*/
+	color: black;
+	font-size: 90px;
+	font-weight: bold;
+	animation: flash 1s linear infinite;
+	-webkit-animation: flash 1s linear infinite;
+	-moz-animation: flash 1s linear infinite;
 }
-
-header .logo {
-    color: #fff;
-    float: left;
+@-webkit-keyframes flash {  
+  50% { color: #DD5A5A; }
 }
-
-header nav ul {
-    float: right;
-    margin-top: 15px;
+@-moz-keyframes flash {  
+  50% { color: #DD5A5A; }
 }
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 0 0 40px;
-    font-size: 1.7rem;
+@keyframes flash {  
+  50% { color: #DD5A5A; }
 }
-
-header nav ul li a {
-    color: #f9e42e;
-}
-
-#burger {
-    position: absolute;
-    right: 22px;
-    top: 34px;
-    display: block;
-}
-
-#burger .patty {
-    width: 45px;
-    height: 5px;
-    background: #f9e42e;
-    border-radius: 6px;
-    margin-top: 5px;
-    display: none;
-}
-
-#close {
-    height: 50px;
-    width: 50px;
-    font-size: 70px;
-    font-weight: 600;
-    color: #f9e42e;
-    position: absolute;
-    right: 1px;
-    top: 8px;
-    padding-top: 0;
-    transform: rotate(45deg);
-    display: none;
-}
-
-
-#hero {
-    height: 700px;
-    background: url(../images/header_bg.jpg) no-repeat top center #131e27;
-    padding-top: 32px;
-}
-
-#hero .logo {
-    color: #fff;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    text-align: center;
-    color: #fff;
-    margin: 120px 0 90px;
-    font-weight: 600;
-}
-
-.button {
-    border-radius: 5px;
-    font-weight: 800;
-    padding: 12px 0;
-    width: 280px;
-    font-size: 1.9rem;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-}
-
-.yellow {
-    background: #f9e42e;
-    color: #033048;
-}
-
-.blue {
-    background: #033048;
-    color: #fff;
-    font-size: 1.3rem;
-}
-
-#benefits {
-    padding: 100px 0 80px;
-}
-
-h3 {
-    color: #033048;
-    font-size: 2.7rem;
-    font-weight: 600;
-    margin-bottom: 40px;
-}
-
-#benefits p,
-#benefits ul {
-    max-width: 600px;
-}
-
-#benefits ul {
-    list-style: disc;
-    margin: 30px 0 0 80px;
-}
-
-#testimonial {
-    background: url(../images/testimonial_bg.jpg) no-repeat top center #071324;
-    padding: 70px 0 70px;
-    color: #fff;
-}
-
-blockquote {
-    font-size: 2.2rem;
-    font-weight: 300;
-    font-style: italic;
-    text-align: center;
-    max-width: 580px;
-    margin: 0 auto;
-}
-
-blockquote span {
-    font-weight: 600;
-    display: block;
-    font-style: normal;
-}
-
-#main {
-    margin-top: 40px;
-}
-
-#posts {
-    max-width: 700px;
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
-}
-
-#sidebar {
-    width: 240px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.post {
-    border-bottom: 1px solid #043049;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-}
-
-.post h2 {
-    font-weight: 600;
-    font-size: 2.5rem;
-    line-height: 1.3;
-    margin-bottom: 30px;
-}
-
-.post h2 a {
-    color: #043049;
-}
-
-.post img {
-    margin-bottom: 30px;
-    max-width: 100%;
-}
-
-.post p {
-    font-size: 1.5rem;
-    line-height: 1.333;
-    color: #606161;
-}
-
-.post p:first-of-type:first-letter {
-    float: left;
-    font-size: 5.5rem;
-    line-height: 65px;
-    padding-top: 4px;
-    padding-right: 8px;
-    padding-left: 3px;
-    font-weight: 600;
-}
-
-.readmore {
-    text-align: right;
-    margin-top: 30px;
-}
-
-.readmore a {
-    color: #043049;
-    font-weight: 600;
-}
-
-#sidebar h3 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-    color: #043049;
-}
-
-#sidebar ul {
-    margin-bottom: 40px;
-}
-
-#sidebar ul li a {
-    color: #043049;
-    font-size: 1.6rem;
-}
-
-#sidebar p {
-    font-size: 1.3rem;
-    line-height: 1.1;
-    margin-bottom: 40px;
-}
-
-#sidebar p a {
-    color: #043049;
-    font-weight: 600;
-}
-
-#bottom-cta {
-    background: #f9e42e;
-    padding: 30px;
-    text-align: center;
-}
-
-footer {
-    background: #121212;
-    padding: 65px 0 45px;
-    text-align: center;
-}
-
-footer .logo {
-    color: #f9e42e;
-}
-
-footer ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 68px 26px 75px;
-}
-
-footer p {
-    font-size: 1.1rem;
-    color: #fff;
-    font-weight: 600;
-}
-
-
-/*media query at 800px*/
-
-@media only screen and (max-width: 800px) {
-    html {
-        font-size: .8rem;
-    }
-    .container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-    header nav ul li {
-        margin-left: 12px;
-    }
-    #hero {
-        height: 400px;
-        background-size: cover;
-    }
-    #hero h2 {
-        margin: 70px 0;
-    }
-    #benefits {
-        padding: 40px 0 40px;
-    }
-    #benefits p {
-        font-size: 1.9rem;
-    }
-    #benefits ul li {
-        font-size: 1.5rem;
-    }
-    #testimonial {
-        padding: 40px 0;
-        background-size: cover;
-    }
-    blockquote span {
-        margin-top: 10px;
-    }
-    footer {
-        padding: 40px 0;
-    }
-    footer ul li {
-        margin: 30px 20px;
-    }
-    #main {
-        margin-top: 20px;
-    }
-    #posts {
-        width: 100%;
-    }
-    #sidebar {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    #sidebar #categories {
-        width: 30%;
-        margin: 10 auto;
-    }
-    #sidebar #about {
-        width: 40%;
-        margin: 10 auto;
-    }
-    #about p {
-        font-size: 1.5rem;
-    }
-    #sidebar img {
-        display: none;
-    }
-}
-
-
-/*media query at 500px*/
-
-@media only screen and (max-width: 500px) {
-    html {
-        font-size: .6rem;
-    }
-    header {
-        text-align: center;
-        padding-bottom: 10px;
-        position: fixed;
-        top: 0;
-    }
-    header .logo {
-        font-size: 3.5rem;
-    }
-    header nav ul {
-        display: block;
-        float: right;
-        width: 100%;
-        height: 0;
-        transition: height 0.5s;
-        overflow: hidden;
-        margin-top: 5px;
-    }
-    header nav ul.slide {
-        height: 120px;
-    }
-    header nav ul li {
-        display: block;
-        text-align: right;
-        padding-top: 5px;
-        font-weight: 600;
-    }
-    #burger .patty {
-        display: block;
-    }
-    #hero {
-        height: 200px;
-        background-size: cover;
-        margin-top: 85px;
-    }
-    #hero h2 {
-        font-size: 2.5rem;
-        margin: 0px auto 20px;
-    }
-    .button {
-        width: 50%;
-        height: 40px;
-        padding-top: 8px;
-    }
-    #benefits {
-        padding: 20px 0;
-    }
-    #benefits h3 {
-        margin-bottom: 5px;
-    }
-    #testimonial {
-        background-size: cover;
-    }
-    #main {
-        margin-top: 100px;
-    }
-    #sidebar #categories {
-        text-align: left;
-        width: 100%;
-    }
-    #sidebar #categories h3 {
-        font-size: 2.2rem;
-    }
-    #categories ul li a {
-        font-size: 2.2rem;
-    }
-    #sidebar #about {
-        display: none;
-    }
+#enter :hover {
+	color: #DD5A5A;
 }
