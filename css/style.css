@@ -6,11 +6,15 @@
 body {
 	height: 100vh;
 }
+#landing{
+	height: 100vh;
+	width:100vw;
+}
 #container{
-	margin: 70px auto 0 auto;
+	margin: 80px auto 0 auto;
 	display: flex;
-	height:80vh;
-	width: 1300px;
+	height:70vh;
+	width: 80vw;
 	align-items: center;
 	justify-content: center;
 }
@@ -20,7 +24,7 @@ body {
 }
 #image img {
 	display: block;
-	width: 70%;
+	width: 500px;
 	height: auto;
 	margin: 0 auto;
 	margin-right: 0px;
@@ -30,14 +34,14 @@ body {
 	align-items: flex-end;
 	justify-content: center;
 	width: 30%;
-	height: 465px;
+	height: 460px;
 	text-align: left;
-	margin-left: 70px;
+	margin-left: 10px;
 }
 #enter a {
 	text-decoration: none;
-	/*color: rgba(40,40,40,1);*/
-	color: black;
+	line-height: 85px;
+	color: rgba(25,25,25,1);
 	font-size: 90px;
 	font-weight: bold;
 	animation: flash 1s linear infinite;
@@ -55,4 +59,30 @@ body {
 }
 #enter :hover {
 	color: #DD5A5A;
+}
+#blueprint{
+	height: 100vh;
+	width: 100vw;
+	background-image: url(../images/blueprintzoom-70%.jpg);
+	background-size: cover;
+	margin-top: -90px;
+	overflow: hidden;
+}
+#navigation {
+	display: flex;
+	flex-wrap: wrap;
+	vertical-align: center;
+	/*justify-content: space-between;*/
+	margin: 100px 0 0 50px;
+}
+#navigation a {
+	color:rgba(25,25,25,0.8);
+	text-decoration: none;
+	font-size: 5vw;
+	font-weight: bold;
+	line-height: 110px;
+	margin-right: 15px;
+}
+#navigation a:hover{
+	background-color: rgba(255,230,85,0.6);
 }
