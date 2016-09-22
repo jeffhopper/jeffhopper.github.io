@@ -74,7 +74,7 @@ body {
     }
 }
 
-#save:hover {
+#save a:hover {
     color: #DD5A5A;
 }
 
