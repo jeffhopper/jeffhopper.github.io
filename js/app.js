@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    $('#enter a').click(function() {
+    $('#save a').click(function() {
         var center = $('#blueprint');
         $('html,body').animate({ scrollTop: center.offset().top }, 400);
     });
