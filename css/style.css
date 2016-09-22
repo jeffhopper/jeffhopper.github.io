@@ -3,86 +3,117 @@
 *:after {
     box-sizing: border-box;
 }
+
 body {
-	height: 100vh;
+    height: 100vh;
 }
-#landing{
-	height: 100vh;
-	width:100vw;
+
+#landing {
+    height: 100vh;
+    width: 100vw;
 }
-#container{
-	margin: 80px auto 0 auto;
-	display: flex;
-	height:70vh;
-	width: 80vw;
-	align-items: center;
-	justify-content: center;
+
+#container {
+    margin: 80px auto 0 auto;
+    display: flex;
+    height: 70vh;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
 }
+
 #image {
-	width: 700px;
-	margin-left: -60px;
+    width: 700px;
+    margin-left: -60px;
 }
+
 #image img {
-	display: block;
-	width: 500px;
-	height: auto;
-	margin: 0 auto;
-	margin-right: 0px;
+    display: block;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 0px;
 }
-#enter {
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	width: 30%;
-	height: 460px;
-	text-align: left;
-	margin-left: 10px;
+
+#save {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 30%;
+    height: 460px;
+    text-align: left;
+    margin-left: 30px;
 }
-#enter a {
-	text-decoration: none;
-	line-height: 85px;
-	color: rgba(25,25,25,1);
-	font-size: 90px;
-	font-weight: bold;
-	animation: flash 1s linear infinite;
-	-webkit-animation: flash 1s linear infinite;
-	-moz-animation: flash 1s linear infinite;
+
+#save a {
+    text-decoration: none;
+    line-height: 85px;
+    color: rgba(25, 25, 25, 1);
+    font-size: 90px;
+    font-weight: bold;
+    animation: flash 1s linear infinite;
+    -webkit-animation: flash 1s linear infinite;
+    -moz-animation: flash 1s linear infinite;
 }
-@-webkit-keyframes flash {  
-  50% { color: #DD5A5A; }
+
+@-webkit-keyframes flash {
+    50% {
+        color: #DD5A5A;
+    }
 }
-@-moz-keyframes flash {  
-  50% { color: #DD5A5A; }
+
+@-moz-keyframes flash {
+    50% {
+        color: #DD5A5A;
+    }
 }
-@keyframes flash {  
-  50% { color: #DD5A5A; }
+
+@keyframes flash {
+    50% {
+        color: #DD5A5A;
+    }
 }
-#enter :hover {
-	color: #DD5A5A;
+
+#save:hover {
+    color: #DD5A5A;
 }
-#blueprint{
-	height: 100vh;
-	width: 100vw;
-	background-image: url(../images/blueprintzoom.jpeg);
-	background-size: cover;
-	margin-top: -90px;
-	overflow: hidden;
+
+#blueprint {
+    width: 100vw;
+    height: auto;
+    background-image: url(../images/blueprintzoom.jpeg);
+    background-size: cover;
+    margin-top: -150px;
+    overflow: auto;
 }
+
 #navigation {
-	display: flex;
-	flex-wrap: wrap;
-	vertical-align: center;
-	/*justify-content: space-between;*/
-	margin: 100px 0 0 50px;
+    /*width:90%;*/
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: center;
+    /*justify-content: space-between;*/
+    margin: 80px 30px 80px 60px;
 }
+
 #navigation a {
-	color:rgba(25,25,25,0.8);
-	text-decoration: none;
-	font-size: 5vw;
-	font-weight: bold;
-	line-height: 110px;
-	margin-right: 15px;
+    color: rgba(15, 15, 15, 0.8);
+    text-decoration: none;
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 8vw;
+    margin-right: 25px;
+    /*margin-left: 25px;*/
 }
-#navigation a:hover{
-	background-color: rgba(255,230,85,0.6);
+
+#navigation p a.small {
+	font-size: 50px;
+}
+#navigation p a.med{
+	font-size: 60px;
+}
+
+#navigation a:hover {
+    background-color: rgba(255, 230, 85, 0.6);
 }
