@@ -4,53 +4,55 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
+body {}
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
 #landing {
+    display: block;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
-#container {
-    margin: 80px auto 0 auto;
-    display: flex;
-    height: 70vh;
-    width: 80vw;
-    align-items: center;
-    justify-content: center;
-}
 
-#image {
-    width: 700px;
-    margin-left: -60px;
+
+/*#image {
+    width: 500px;
+    margin: -80px 100px 0 0;
 }
 
 #image img {
     display: block;
-    width: 500px;
+    width: 350px;
     height: auto;
     margin: 0 auto;
-    margin-right: 0px;
-}
+}*/
 
-#save {
+#menu {
+    width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 30%;
-    height: 460px;
-    text-align: left;
-    margin-left: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(230, 230, 230, 0.5);
+    background: linear-gradient(rgba(200, 200, 200, 0.9), rgba(230, 230, 230, 0.3));
 }
 
-#save a {
+#menu a {
+    /*border: 3px dotted black;*/
+    padding: 10px 20px;
+    margin: 20px;
+    vertical-align: center;
     text-decoration: none;
-    line-height: 85px;
-    color: rgba(25, 25, 25, 1);
-    font-size: 90px;
+    color: rgba(100, 100, 100, 1);
     font-weight: bold;
+    letter-spacing: 10px;
+}
+
+#menu a#save {
+    font-size: 50px;
     animation: flash 1s linear infinite;
     -webkit-animation: flash 1s linear infinite;
     -moz-animation: flash 1s linear infinite;
@@ -58,62 +60,147 @@ body {
 
 @-webkit-keyframes flash {
     50% {
-        color: #DD5A5A;
+        color: rgba(242, 65, 65, 0.9);
     }
 }
 
 @-moz-keyframes flash {
     50% {
-        color: #DD5A5A;
+        color: rgba(242, 65, 65, 0.9);
     }
 }
 
 @keyframes flash {
     50% {
-        color: #DD5A5A;
+        color: rgba(242, 65, 65, 0.9);
     }
 }
 
-#save a:hover {
-    color: #DD5A5A;
+#menu a:hover {
+    color: rgba(242, 65, 65, 0.9);
+}
+
+#menu a#info {
+    font-size: 28px;
+    font-weight: normal;
+    border: 4px dotted rgba(242, 65, 65, 0.9);
+    padding-left: 28px;
+}
+
+#menu a#info:hover {
+    border: 4px dotted black;
+}
+
+#container {
+    margin: 50px auto 0 auto;
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/blueprint2.jpeg);
+    background-size: cover;
+}
+
+video {
+    height: 75vh;
 }
 
 #blueprint {
-    width: 100vw;
+    width: 100%;
     height: auto;
     background-image: url(../images/blueprintzoom.jpeg);
     background-size: cover;
-    margin-top: -150px;
-    overflow: auto;
+    margin-top: -20px;
+    overflow: hidden;
 }
 
 #navigation {
-    /*width:90%;*/
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     vertical-align: center;
-    /*justify-content: space-between;*/
-    margin: 80px 30px 80px 60px;
+    margin: 100px 30px 80px 60px;
 }
 
 #navigation a {
-    color: rgba(15, 15, 15, 0.8);
+    color: rgba(40, 40, 40, 1);
+    /*color: rgba(50, 67, 152, 1);*/
     text-decoration: none;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: bold;
     line-height: 8vw;
     margin-right: 25px;
-    /*margin-left: 25px;*/
 }
 
 #navigation p a.small {
-	font-size: 50px;
+    font-size: 50px;
+    cursor: pointer;
 }
-#navigation p a.med{
-	font-size: 60px;
+
+#navigation p a.med {
+    font-size: 60px;
 }
 
 #navigation a:hover {
+    color: rgba(100, 100, 100, 1);
     background-color: rgba(255, 230, 85, 0.6);
+}
+
+
+/*MEDIA QUERIES*/
+
+@media only screen and (min-width: 320px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
+    #wrapper {
+        width: 100vw;
+    }
+    #menu{
+    	height: 110px;
+    }
+    #menu a{
+    	letter-spacing: normal;
+    	padding:8px;
+    }
+    #menu a#save {
+        font-size: 25px;
+    }
+    #menu a#info{
+    	padding-left: 10px
+    }
+    #landing{
+    	height: 70vh;
+    }
+    #container{
+    	margin: 0;
+    	background-size: cover;
+    	height: 50vh;
+    }
+    #video {
+    	margin-top: 40px;
+        width: 90vw;
+        height: auto;
+    }
+    #blueprint {
+
+    }
+    #navigation {
+    	text-align: center;
+    	margin: 100px auto;
+    }
+    #navigation p {
+    	margin: 0 auto;
+    }
+    #navigation a {
+    	display: block;
+    	width: 100%;
+    	font-size: 30px;
+    	line-height: 40px;
+    	margin-right: 0;
+    }
+    #navigation p a.small{
+    	font-size: 26px;
+    }
+    #navigation p a.med {
+    	font-size: 28px;
+    }
 }
