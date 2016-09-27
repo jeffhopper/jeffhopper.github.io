@@ -164,10 +164,11 @@ video {
     	padding:8px;
     }
     #menu a#save {
-        font-size: 25px;
+        font-size: 30px;
     }
     #menu a#info{
-    	padding-left: 10px
+    	padding-left: 10px;
+        padding-right: 10px;
     }
     #landing{
     	height: 70vh;
@@ -178,35 +179,36 @@ video {
     	height: 50vh;
     }
     #video {
-    	margin-top: 40px;
-        width: 90vw;
+    	margin-top: 30px;
+        width: 85vw;
         height: auto;
     }
     #blueprint {
 
     }
     #navigation {
+        width: 100vw;
     	text-align: center;
-    	margin: 100px auto;
+    	margin: 50px auto;
     }
     #navigation p {
     	margin: 0 auto;
     }
     #navigation a {
     	display: block;
-    	width: 100%;
-    	font-size: 30px;
+    	width: 100vw;
+    	font-size: 9.5vw;
     	line-height: 40px;
     	margin-right: 0;
     }
     #navigation p a.small{
-    	font-size: 26px;
+    	font-size: 30px;
     }
     #navigation p a.med {
-    	font-size: 28px;
+    	font-size: 32px;
     }
     #footer{
-        margin-top: 50px;
+        margin-top: 10px;
     }
     #footer img {
         width: 120px;
