@@ -38,7 +38,7 @@ body {}
 }
 
 #menu a#save {
-    font-size: 50px;
+    font-size: 55px;
     animation: flash 1s linear infinite;
     -webkit-animation: flash 1s linear infinite;
     -moz-animation: flash 1s linear infinite;
@@ -212,7 +212,7 @@ video {
     	font-size: 30px;
     }
     #navigation p a.med {
-    	font-size: 32px;
+    	font-size: 35px;
     }
     #footer{
         margin-top: 10px;
