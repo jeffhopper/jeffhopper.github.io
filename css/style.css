@@ -71,6 +71,7 @@ body {}
     font-weight: bold;
     border: 4px dotted rgba(242, 65, 65, 0.9);
     padding: 10px;
+    margin-right: 50px;
     letter-spacing: normal;
 }
 
@@ -159,15 +160,22 @@ video {
     }
     #menu{
     	height: 110px;
+        margin: 0;
     }
     #menu a{
-    	letter-spacing: 2px;
+    	letter-spacing: normal;
     }
     #menu a#save {
-        font-size: 30px;
+        font-size: 32px;
         padding: 8px;
+        width: 50vw;
     }
-  
+
+    #menu a#info {
+        margin-right: 30px;
+        font-size: 30px;
+    }
+
     #landing{
     	height: 70vh;
     }
@@ -182,7 +190,7 @@ video {
         height: auto;
     }
     #blueprint {
-
+        margin-top: -50px;
     }
     #navigation {
         width: 100vw;
