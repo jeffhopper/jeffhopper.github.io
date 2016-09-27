@@ -68,9 +68,10 @@ body {}
 
 #menu a#info {
     font-size: 28px;
-    font-weight: normal;
+    font-weight: bold;
     border: 4px dotted rgba(242, 65, 65, 0.9);
-    padding-left: 28px;
+    padding: 10px;
+    letter-spacing: normal;
 }
 
 #menu a#info:hover {
@@ -110,7 +111,7 @@ video {
 }
 
 #navigation a {
-    color: rgba(40, 40, 40, 1);
+    color: rgba(60, 60, 60, 1);
     /*color: rgba(50, 67, 152, 1);*/
     text-decoration: none;
     font-size: 80px;
@@ -130,7 +131,7 @@ video {
 
 #navigation a:hover {
     color: rgba(100, 100, 100, 1);
-    background-color: rgba(255, 230, 85, 0.6);
+    background-color: rgba(255, 230, 85, 0.7);
 }
 
 #footer {
@@ -152,7 +153,7 @@ video {
 
 /*MEDIA QUERIES*/
 
-@media only screen and (min-width: 320px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (min-width: 320px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2){
     #wrapper {
         width: 100vw;
     }
@@ -166,9 +167,7 @@ video {
         font-size: 30px;
         padding: 8px;
     }
-    #menu a#info{
-        padding: 10px;
-    }
+  
     #landing{
     	height: 70vh;
     }
@@ -188,7 +187,7 @@ video {
     #navigation {
         width: 100vw;
     	text-align: center;
-    	margin: 50px auto;
+    	margin: 30px auto;
     }
     #navigation p {
     	margin: 0 auto;
@@ -198,7 +197,7 @@ video {
     	width: 100vw;
     	font-size: 9.5vw;
     	line-height: 40px;
-    	margin-right: 0;
+    	margin: 7px 0;
     }
     #navigation p a.small{
     	font-size: 30px;
