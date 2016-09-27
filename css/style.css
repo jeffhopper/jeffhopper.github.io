@@ -168,6 +168,7 @@ video {
     #menu a#save {
         font-size: 32px;
         padding: 8px;
+        margin-top: 40px;
         width: 50vw;
     }
 
@@ -195,7 +196,7 @@ video {
     #navigation {
         width: 100vw;
     	text-align: center;
-    	margin: 30px auto;
+    	margin: 60px auto 30px;
     }
     #navigation p {
     	margin: 0 auto;
