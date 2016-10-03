@@ -32,51 +32,119 @@ body {}
     margin: 20px;
     vertical-align: center;
     text-decoration: none;
-    color: rgba(100, 100, 100, 1);
+    color: rgba(100, 100, 100, 0);
     font-weight: bold;
     letter-spacing: 10px;
 }
 
 #menu a#save {
-    font-size: 55px;
-    animation: flash 1s linear infinite;
-    -webkit-animation: flash 1s linear infinite;
-    -moz-animation: flash 1s linear infinite;
+    font-size: 50px;
+    color: rgba(242, 65, 65, 1);
+    text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    transition: all 0.2s;
+    animation: flash 5s linear infinite;
+    -webkit-animation: flash 5s linear infinite;
+    -moz-animation: flash 5s linear infinite;
 }
 
 @-webkit-keyframes flash {
-    50% {
-        color: rgba(242, 65, 65, 0.9);
+    0% {
+        color: rgba(242, 65, 65, 1);
+    }
+    92% {
+        color: rgba(242, 65, 65, 1);
+        text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    }
+    94% {
+        color: rgba(100, 100, 100, 0);
+        text-shadow: 10px 1px rgba(50, 50, 50, 0.3);
+    }
+    95% {
+        color: rgba(242, 65, 65, 1);
+        text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    }
+    96% {
+        color: rgba(100, 100, 100, 0);
+        text-shadow: 10px 1px rgba(50, 50, 50, 0.3);
+    }
+    100% {
+        color: rgba(242, 65, 65, 1);
     }
 }
 
 @-moz-keyframes flash {
-    50% {
-        color: rgba(242, 65, 65, 0.9);
+    0% {
+        color: rgba(242, 65, 65, 1);
+    }
+    92% {
+        color: rgba(242, 65, 65, 1);
+        text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    }
+    94% {
+        color: rgba(100, 100, 100, 0);
+        text-shadow: 10px 1px rgba(50, 50, 50, 0.3);
+    }
+    95% {
+        color: rgba(242, 65, 65, 1);
+        text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    }
+    96% {
+        color: rgba(100, 100, 100, 0);
+        text-shadow: 10px 1px rgba(50, 50, 50, 0.3);
+    }
+    100% {
+        color: rgba(242, 65, 65, 1);
     }
 }
 
 @keyframes flash {
-    50% {
-        color: rgba(242, 65, 65, 0.9);
+    0% {
+        color: rgba(242, 65, 65, 1);
+    }
+    92% {
+        color: rgba(242, 65, 65, 1);
+        text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    }
+    94% {
+        color: rgba(100, 100, 100, 0);
+        text-shadow: 10px 1px rgba(50, 50, 50, 0.3);
+    }
+    95% {
+        color: rgba(242, 65, 65, 1);
+        text-shadow: -3px 1px rgba(50, 50, 50, 0.3);
+    }
+    96% {
+        color: rgba(100, 100, 100, 0);
+        text-shadow: 10px 1px rgba(50, 50, 50, 0.3);
+    }
+    100% {
+        color: rgba(242, 65, 65, 1);
     }
 }
 
-#menu a:hover {
-    color: rgba(242, 65, 65, 0.9);
+#menu a#save:hover {
+    color: rgba(242, 65, 65, 0.1);
 }
 
 #menu a#info {
     font-size: 28px;
     font-weight: bold;
-    border: 4px dotted rgba(242, 65, 65, 0.9);
+    color: rgba(190, 190, 190, 1);
+    border: 4px solid rgba(190, 190, 190, 1);
+    box-shadow: 5px 2px rgba(80, 80, 80, 0.1);
+    border-radius: 4px;
     padding: 10px;
     margin-right: 50px;
     letter-spacing: normal;
+    transition: all 0.1s;
 }
 
 #menu a#info:hover {
-    border: 4px dotted black;
+    color: rgba(190, 190, 190, 1);
+    box-shadow: 1px 1px rgba(51, 51, 51, 0.1);
+    /*border: 3px solid rgba(180, 180, 180, 0.9);*/
+    padding: 9px;
+    font-size: 27px;
 }
 
 #container {
@@ -109,6 +177,7 @@ video {
     flex-wrap: wrap;
     vertical-align: center;
     margin: 100px 30px 80px 60px;
+    text-align: center;
 }
 
 #navigation a {
@@ -118,7 +187,9 @@ video {
     font-size: 80px;
     font-weight: bold;
     line-height: 8vw;
-    margin-right: 25px;
+    padding: 10px;
+    margin-right: 30px;
+    transition: all 0.2s;
 }
 
 #navigation p a.small {
@@ -132,13 +203,13 @@ video {
 
 #navigation a:hover {
     color: rgba(100, 100, 100, 1);
-    background-color: rgba(255, 230, 85, 0.7);
+    background-color: rgba(255, 230, 85, 0.8);
 }
 
 #footer {
     width: 100%;
     height: 30vh;
-    margin-top: 150px;
+    margin-top: 60px;
     padding-bottom: 100px;
     display: flex;
     align-items: center;
@@ -146,24 +217,64 @@ video {
     background: linear-gradient(rgba(230, 230, 230, 0.1), rgba(200, 200, 200, 0.9));
 }
 
-#footer img {
+#footer img#logo {
+    display: block;
     max-width: 200px;
-    margin: 50px auto 0;
+    filter: opacity(60%);
+    -webkit-filter: opacity(60%);
 }
 
 
 /*MEDIA QUERIES*/
 
-@media only screen and (min-width: 320px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (max-width: 1000px) {
+    #menu a#save {
+        font-size: 45px;
+    }
+    #navigation p {
+        margin-top: 35px;
+    }
+    #navigation a {
+        font-size: 70px;
+        line-height: 9vw;
+    }
+    #navigation a.small {
+        font-size: 44px;
+    }
+    #navigation a.med {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #menu a#save {
+        font-size: 40px;
+    }
+    #navigation p {
+        margin-top: 40px;
+    }
+    #navigation a {
+        font-size: 65px;
+        line-height: 10vw;
+    }
+    #navigation a.small {
+        font-size: 40px;
+    }
+    #navigation a.med {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
     #wrapper {
         width: 100vw;
     }
-    #menu{
-    	height: 110px;
+    #menu {
+        height: 110px;
         margin: 0;
     }
-    #menu a{
-    	letter-spacing: normal;
+    #menu a {
+        letter-spacing: normal;
     }
     #menu a#save {
         font-size: 32px;
@@ -171,22 +282,24 @@ video {
         margin-top: 40px;
         width: 50vw;
     }
-
     #menu a#info {
         margin-right: 30px;
-        font-size: 30px;
+        font-size: 20px;
     }
-
-    #landing{
-    	height: 70vh;
+    #menu a#info:hover {
+    padding: 9px;
+    font-size: 19px;
+}
+    #landing {
+        height: 70vh;
     }
-    #container{
-    	margin: 0;
-    	background-size: cover;
-    	height: 50vh;
+    #container {
+        margin: 0;
+        background-size: cover;
+        height: 50vh;
     }
     #video {
-    	margin-top: 30px;
+        margin-top: 30px;
         width: 85vw;
         height: auto;
     }
@@ -195,26 +308,26 @@ video {
     }
     #navigation {
         width: 100vw;
-    	text-align: center;
-    	margin: 60px auto 30px;
+        text-align: center;
+        margin: 60px auto 30px;
     }
     #navigation p {
-    	margin: 0 auto;
+        margin: 0 auto;
     }
     #navigation a {
-    	display: block;
-    	width: 100vw;
-    	font-size: 9.5vw;
-    	line-height: 40px;
-    	margin: 7px 0;
+        display: block;
+        width: 100vw;
+        font-size: 9.5vw;
+        line-height: 40px;
+        margin: 7px 0;
     }
-    #navigation p a.small{
-    	font-size: 30px;
+    #navigation p a.small {
+        font-size: 30px;
     }
     #navigation p a.med {
-    	font-size: 35px;
+        font-size: 35px;
     }
-    #footer{
+    #footer {
         margin-top: 10px;
     }
     #footer img {
