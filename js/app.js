@@ -17,4 +17,11 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $('a#modal-button').click(function() {
+        $('#modal').addClass('visible');
+    });
+
+    $('#close-button').click(function() {
+        $('#modal').removeClass('visible');
+    });
 });
