@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // LOADER
     function onReady(callback) {
-        var intervalID = window.setInterval(checkReady, 4000);
+        var intervalID = window.setInterval(checkReady, 3500);
 
         function checkReady() {
             if (document.getElementsByTagName('body')[0] !== undefined) {
@@ -22,12 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    // CONTENT FUNCTIONS
 
+    // CONTENT VARIABLES 
     var menuButton = document.getElementById('menu-button');
     var contentContainer = document.getElementById('content');
     var title = document.getElementById('title');
     var backButton = document.getElementById('back');
+
+
+
 
     // SLIDE UP CONTENT
     menuButton.addEventListener('click', function() {

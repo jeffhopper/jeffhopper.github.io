@@ -17,6 +17,7 @@ a:visited {
 }
 
 #loader {
+    display: -webkit-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +26,7 @@ a:visited {
 }
 
 #loader img {
+    display: -webkit-flex;
     display: flex;
     max-width: 500px;
     height: auto;
@@ -56,11 +58,19 @@ a:visited {
     }
 }
 
-#landing {
-    position: relative;
-    /*top: 0;*/
+#video-container {
+    position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    overflow: none;
+    z-index: -100;
+}
+
+video {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: -100;
 }
 
 #menu-button {
@@ -78,6 +88,26 @@ a:visited {
     transition: all .3s ease-out;
 }
 
+#menu-button .line {
+    height: 5px;
+    width: 60px;
+    margin-top: 8px;
+    background-color: rgba(255, 255, 60, 1);
+    transition: all .1s;
+}
+
+#menu-button .line:first-child {
+    width: 53px;
+}
+
+#menu-button .line:last-child {
+    width: 48px;
+}
+
+#menu-button .line:hover {
+    width: 65px;
+}
+
 #menu-button.fade {
     opacity: 0;
 }
@@ -92,22 +122,21 @@ a:visited {
     margin: 10px;
     font-weight: bold;
     font-size: 18px;
-    color: white;
+    color: rgba(225, 223, 230, 1);
 }
 
 #content {
     position: fixed;
-    -webkit-display: flex;
+    display: -webkit-flex;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     bottom: 0;
-    bottom: -90vh;
     bottom: -100vh;
-    height: 75vh;
+    height: 80vh;
     width: 100%;
-    background-color: white;
-    /*box-shadow: 0 0px 30px rgba(0, 0, 0, .5);*/
-    transition: all 0.4s ease-out;
+    background-color: rgba(225, 223, 230, 1);
+    /*background-color: rgba(241, 241, 241, 1);*/
+    transition: all 0.5s ease-in;
 }
 
 #content.show {
@@ -115,20 +144,28 @@ a:visited {
 }
 
 h1#title {
+    font-family: 'Roboto', sans-serif;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     position: absolute;
-    top: -140px;
-    margin: 0;
+    top: -20vh;
+    height: 20vh;
     width: 100%;
+    margin: 0;
+    padding: 0 30px;
     text-align: center;
-    font-size: 5.5vw;
-    font-weight: bold;
-    letter-spacing: 18px;
+    font-size: 6.5vw;
+    font-weight: 700;
+    letter-spacing: 14px;
     color: white;
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-    -webkit-transition-delay: .6s;
-    transition-delay: .6s;
+    /*text-shadow: 4px 3px 0 rgba(40,40,40,.5);*/
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    -webkit-transition-delay: .7s;
+    transition-delay: .7s;
 }
 
 h1#title.fade {
@@ -137,41 +174,48 @@ h1#title.fade {
 
 #menu {
     position: relative;
-    -webkit-display: flex;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
-    /*justify-content: center;*/
     height: 100%;
-    width: 35%;
+    width: 32%;
     padding: 0 20px;
-    /*background-color: rgba(255,255,170,1);*/
 }
 
 #menu ul {
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 90%;
+    padding: 0 0 0 10px;
 }
 
 #menu ul li {
     list-style: none;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 #menu ul li a {
     color: black;
     text-decoration: none;
+    border-bottom: 10px solid rgba(255, 255, 80, 1);
+    transition: all .1s;
+}
+
+#menu ul li a:hover {
+    border-bottom: 22px solid rgba(255, 255, 80, 1);
 }
 
 #info {
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 62%;
+    width: 68%;
     height: 100%;
     overflow: auto;
-    padding: 0 50px 0 40px;
+    padding: 0 50px 0 10px;
 }
 
 #info #transcript {
@@ -181,30 +225,49 @@ h1#title.fade {
 
 #info #transcript h2 {
     font-weight: 600;
-    font-size: 34px;
-    letter-spacing: 5px;
+    font-size: 42px;
+    letter-spacing: 6px;
     font-style: italic;
-    margin: 50px 0;
+    margin: 40px 0;
 }
 
 #info #transcript p {
-    font-size: 24px;
+    font-size: 22px;
     font-style: italic;
     font-weight: 200;
-    line-height: 40px;
+    line-height: 38px;
     /*padding: 10px 20px 0;*/
 }
+
+#info #transcript p span#black-blocks {
+    border-bottom: 5px solid rgba(255, 255, 80, 1);
+    cursor: pointer;
+}
+
+span#black-blocks:hover {
+    position: relative;
+}
+
+span#black-blocks:hover:after {
+    content: url(images/blackblocks.jpg);
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 50px;
+}
+
+
 
 #info #stories {
     width: 80%;
     border-top: 1px solid black;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 #info #stories .story {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
-    line-height: 35px;
+    line-height: 34px;
     padding: 50px 0;
     border-bottom: 1px solid black;
 }
@@ -214,22 +277,174 @@ h1#title.fade {
     padding: 50px 0 20px 0;
 }
 
-span {
-    font-weight: 600;
+#info #stories .story span {
+    font-size: 38px;
     font-style: oblique;
+    color: rgba(30, 30, 30, 1);
+    line-height: 60px;
+    cursor: pointer;
+    border-bottom: 10px solid rgba(255, 255, 80, 1);
+    /*letter-spacing: 5px;*/
+    /*font-weight: 400;*/
+    /*font-style: oblique;*/
 }
 
-#video-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    overflow: none;
-    z-index: -100;
+.jeremiah span:hover {
+    position: relative;
 }
 
-video {
-    position: fixed;
-    bottom: -100px;
-    width: 100%;
-    z-index: -100;
+.jeremiah span:hover:after {
+    content: url(images/babb.gif);
+    display: block;
+    position: absolute;
+    left: 180px;
+    top: -250px;
 }
+
+.head span:hover {
+    position: relative;
+}
+
+.head span:hover:after {
+    content: url(images/chead.gif);
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: -250px;
+}
+
+.murrell span:hover {
+    position: relative;
+}
+
+.murrell span:hover:after {
+    content: url(images/murrell.jpg);
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: -450px;
+}
+
+/*DESKTOPS AND BIG SCREENS */
+
+@media only screen and (min-width: 1400px) {
+    #info #transcript h2 {
+        font-size: 46px;
+    }
+    #info #transcript p {
+        font-size: 24px;
+        line-height: 40px;
+    }
+    #info #stories .story {
+        font-size: 20px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #menu {
+        width: 370px;
+    }
+    #menu ul li {
+        font-size: 28px;
+    }
+    #info #transcript {
+        width: 93%
+    }
+    #info #transcript h2 {
+        font-size: 44px;
+    }
+    #info #transcript p {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    #info #stories {
+        width: 80%;
+    }
+    #info #stories .story {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #menu ul li {
+        font-size: 26px;
+    }
+    #info {
+        padding: 0 30px 0 10px;
+    }
+    #info #transcript {
+        width: 98%;
+    }
+    #info #stories {
+        width: 95%;
+    }
+    #info #transcript h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    span#black-blocks:hover:after {
+        content: url(images/blackblocks-small.jpg);
+    }
+    .jeremiah span:hover:after {
+        content: url(images/babb-small.gif);
+    }
+    .murrell span:hover:after {
+        content: url(images/murrell-small.jpg);
+        top: -350px;
+    }
+    .head span:hover:after {
+        content: url(images/chead-small.gif);
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    #info #transcript h2 {
+        font-size: 34px;
+    }
+    #info #transcript p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    #info #stories .story {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    #info #stories .story span {
+        font-size: 30px;
+    }
+    #menu {
+        height: 86%;
+    }
+    #menu ul li {
+        font-size: 24px;
+    }
+}
+
+
+/* ASPECT RATIO */
+
+@media only screen and (max-aspect-ratio: 4/3) {
+    #content {
+        height: 85vh;
+    }
+    h1#title {
+        font-size: 6vw;
+        height: 15vh;
+        top: -15vh;
+    }
+    #video-container {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    video {
+        height: 100%;
+        width: auto;
+    }
+}
+
+
+/**/
