@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // LOADER
     function onReady(callback) {
-        var intervalID = window.setInterval(checkReady, 3500);
+        var intervalID = window.setInterval(checkReady, 000);
 
         function checkReady() {
             if (document.getElementsByTagName('body')[0] !== undefined) {
@@ -35,13 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // SLIDE UP CONTENT
     menuButton.addEventListener('click', function() {
         title.className += ' fade';
-        menuButton.className += ' fade';
         contentContainer.className += ' show';
     });
 
     // SLIDE DOWN CONTNET 
     backButton.addEventListener('click', function() {
-        menuButton.className -= ' fade';
         title.className -= ' fade';
         contentContainer.className -= ' show';
     });
