@@ -1,3 +1,23 @@
+
+
+
+#quilt {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#quilt img {
+    display: block;
+    max-width: 300px;
+}
+
+
+
+/*===================*/
+
 *,
 *:before,
 *:after {
@@ -506,7 +526,5 @@ span#blueprint:hover:after {
         height: 100%;
         width: auto;
     }
-}
 
 
-/**/
